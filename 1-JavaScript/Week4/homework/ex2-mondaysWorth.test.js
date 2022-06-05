@@ -32,13 +32,16 @@ const mondayTasks = [
 const hourlyRate = 25;
 
 function computeEarnings(taskArr, hourlyRate) {
-  if(taskArr.every(task => !isNaN(task.duration))){
-    const result = taskArr.reduce((acc, item) => {
-      return acc + ((item.duration / 60.0) * hourlyRate);
-    }, 0);
-    return '€' + Number(result).toFixed(2);
+  if (taskArr.some((task) => isNaN(task.duration))) {
+    throw new Error('Duration property should be a Number.');
   }
-  throw new Error('Duration property should be a Number.');
+
+  const result = taskArr
+    .map((task) => (task.duration / 60.0) * hourlyRate)
+    .reduce((acc, earning) => acc + earning)
+    .toFixed(2);
+
+  return '€' + result;
 }
 
 // ! Unit tests (using Jest)
