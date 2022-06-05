@@ -31,8 +31,14 @@ const mondayTasks = [
 
 const hourlyRate = 25;
 
-function computeEarnings(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function computeEarnings(taskArr, hourlyRate) {
+  if(taskArr.every(task => !isNaN(task.duration))){
+    const result = taskArr.reduce((acc, item) => {
+      return acc + ((item.duration / 60.0) * hourlyRate);
+    }, 0);
+    return '€' + Number(result).toFixed(2);
+  }
+  throw new Error('Duration property should be a Number.');
 }
 
 // ! Unit tests (using Jest)
