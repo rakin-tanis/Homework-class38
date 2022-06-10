@@ -9,4 +9,20 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 3. Look in the css file!
 ------------------------------------------------------------------------------*/
 
-// TODO add your JavaScript code here.
+const map = new Map([
+  ['nickname', 'akin'],
+  ['fav-food', 'yellow-melon'],
+  ['hometown', 'istanbul'],
+]);
+
+const list = document.querySelector('ul');
+const arr = Array.from(list.children);
+
+arr.forEach((li) => {
+  li.classList.add('list-item');
+  Array.from(li.children).forEach((el) => {
+    if (map.has(el.id)) {
+      el.textContent = map.get(el.id);
+    }
+  });
+});
