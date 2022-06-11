@@ -24,6 +24,10 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 const STEP = 10;
 const WALK_INTERVAL = 50;
 const DANCE_INTERVAL = 5000;
+const WALKING_CAT_GIF =
+  'http://www.anniemation.com/clip_art/images/cat-walk.gif';
+const DANCING_CAT_GIF =
+  'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
 
 function catWalk() {
   const imgEl = document.querySelector('img');
@@ -41,10 +45,9 @@ function catWalk() {
 
 function dance(element, position) {
   clearInterval(interval);
-  element.src =
-    'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
+  element.src = DANCING_CAT_GIF;
   setTimeout(() => {
-    element.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
+    element.src = WALKING_CAT_GIF;
     walk(element, position);
     interval = setInterval(catWalk, WALK_INTERVAL);
   }, DANCE_INTERVAL);
