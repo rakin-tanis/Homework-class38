@@ -32,9 +32,7 @@ function createBookList(books) {
     imgEl.src =
       './assets/' + book.title.toLowerCase().split(' ').join('_') + '.jpg';
     liEl.classList.add('card');
-    book.alreadyRead
-      ? (liEl.style.backgroundColor = 'green')
-      : (liEl.style.backgroundColor = 'red');
+    liEl.style.background = book.alreadyRead ? 'green' : 'red';
     contentEl.classList.add('content');
 
     contentEl.appendChild(titleEl);
