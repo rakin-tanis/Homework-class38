@@ -21,8 +21,50 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
+const STEP = 10;
+const WALK_INTERVAL = 50;
+const DANCE_INTERVAL = 5000;
+
 function catWalk() {
-  // TODO complete this function
+  const imgEl = document.querySelector('img');
+  const position = imgEl.style.left
+    ? imgEl.style.left
+    : '-' + imgEl.width + 'px';
+  const newPosition = Number(position.replace('px', ''));
+
+  if (isInTheMiddle(newPosition, imgEl.width)) {
+    dance(imgEl, newPosition);
+  } else {
+    walk(imgEl, newPosition);
+  }
 }
 
-// TODO execute `catWalk` when the browser has completed loading the page
+function dance(element, position) {
+  clearInterval(interval);
+  element.src =
+    'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
+  setTimeout(() => {
+    element.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
+    walk(element, position);
+    interval = setInterval(catWalk, WALK_INTERVAL);
+  }, DANCE_INTERVAL);
+}
+
+function walk(element, position) {
+  position += STEP;
+  if (isOutOfPage(position)) {
+    position = '-' + element.width;
+  }
+  element.style.left = position + 'px';
+}
+
+const isInTheMiddle = (position, elementWidth) => {
+  return (
+    position + elementWidth / 2 > window.innerWidth / 2 - STEP / 2 &&
+    position + elementWidth / 2 <= window.innerWidth / 2 + STEP / 2
+  );
+};
+
+const isOutOfPage = (position) => position > window.innerWidth;
+
+let interval = setInterval(catWalk, WALK_INTERVAL);
