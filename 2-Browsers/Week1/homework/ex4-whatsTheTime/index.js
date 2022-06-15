@@ -34,8 +34,9 @@ const initialize = () => {
   document.body.parentElement.style.height = '100%';
   document.body.style.height = '100%';
   document.body.style.display = 'flex';
+  addCurrentTime();
 };
 
 setInterval(addCurrentTime, 1000);
 
-window.addEventListener('DOMContentLoader', initialize());
+window.onload = initialize;
