@@ -31,6 +31,7 @@ function createBookList(books) {
     authorEl.textContent = book.author;
     imgEl.src =
       './assets/' + book.title.toLowerCase().split(' ').join('_') + '.jpg';
+    imgEl.alt = 'image of ' + book.title;
     liEl.classList.add('card');
     liEl.style.background = book.alreadyRead ? 'green' : 'red';
     contentEl.classList.add('content');
