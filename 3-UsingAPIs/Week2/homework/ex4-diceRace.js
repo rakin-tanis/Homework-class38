@@ -15,14 +15,23 @@ const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
   const dice = [1, 2, 3, 4, 5];
-  // TODO complete this function; use Promise.race() and rollDie()
+  const promiseList = dice.map(
+    (index) =>
+      new Promise((resolve, reject) =>
+        rollDie(index).then(resolve).catch(reject)
+      )
+  );
+  return Promise.race(promiseList);
 }
 
 // Refactor this function to use async/await and try/catch
-function main() {
-  rollDice()
-    .then((results) => console.log('Resolved!', results))
-    .catch((error) => console.log('Rejected!', error.message));
+async function main() {
+  try {
+    const results = await rollDice();
+    console.log('Resolved!', results);
+  } catch (error) {
+    console.log('Rejected!', error.message);
+  }
 }
 
 // ! Do not change or remove the code below
@@ -30,3 +39,9 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDice;
+
+/* 
+every promises working independently from other promises. 
+So even if one of them resolved or rejected, other continue to run.
+But only the one which is finished first can change the state of the promise.
+*/
