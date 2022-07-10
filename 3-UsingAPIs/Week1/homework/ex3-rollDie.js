@@ -54,3 +54,5 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDie;
+
+// because when the promise return reject it will return err and stop the rest of the code.

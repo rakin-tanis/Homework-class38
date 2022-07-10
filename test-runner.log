@@ -6023,3 +6023,23 @@ Error: Die 1 rolled off the table.
 2022-07-04 06:26:28 info: --------------------------------------------
 2022-07-04 06:26:37 info: All unit tests passed.
 2022-07-04 06:26:45 info: All steps were completed successfully
+2022-07-09 03:22:52 info: ---------------------------------------
+2022-07-09 03:22:52 info: >>> Running Unit Test `ex1-johnWho` <<<
+2022-07-09 03:22:52 info: ---------------------------------------
+2022-07-09 03:23:01 info: All unit tests passed.
+2022-07-09 03:23:09 info: All steps were completed successfully
+2022-07-09 03:23:41 info: -------------------------------------------------
+2022-07-09 03:23:41 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2022-07-09 03:23:41 info: -------------------------------------------------
+2022-07-09 03:23:46 info: All unit tests passed.
+2022-07-09 03:23:52 info: All steps were completed successfully
+2022-07-09 03:24:20 info: --------------------------------------------
+2022-07-09 03:24:20 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2022-07-09 03:24:20 info: --------------------------------------------
+2022-07-09 03:24:24 info: All unit tests passed.
+2022-07-09 03:24:30 info: All steps were completed successfully
+2022-07-09 03:26:15 info: ----------------------------------------------
+2022-07-09 03:26:15 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2022-07-09 03:26:15 info: ----------------------------------------------
+2022-07-09 03:26:20 info: All unit tests passed.
+2022-07-09 03:26:25 info: All steps were completed successfully
