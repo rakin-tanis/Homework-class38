@@ -27,9 +27,7 @@ const rollDie = () =>
         return resolve(value);
       }
       if (roll < randomRollsToDo) {
-        setTimeout(() => {
-          return rollOnce(roll + 1);
-        }, 500);
+        setTimeout(() => rollOnce(roll + 1), 500);
       }
     };
 
