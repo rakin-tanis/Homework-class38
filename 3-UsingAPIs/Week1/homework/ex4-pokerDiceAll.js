@@ -29,12 +29,7 @@ const rollDie = require('../../helpers/pokerDiceRoller');
 function rollDice() {
   const dice = [1, 2, 3, 4, 5];
 
-  const promiseList = dice.map(
-    (index) =>
-      new Promise((resolve, reject) =>
-        rollDie(index).then(resolve).catch(reject)
-      )
-  );
+  const promiseList = dice.map((index) => rollDie(index));
   return Promise.all(promiseList);
 }
 
