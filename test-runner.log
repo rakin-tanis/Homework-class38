@@ -6043,3 +6043,337 @@ Error: Die 1 rolled off the table.
 2022-07-09 03:26:15 info: ----------------------------------------------
 2022-07-09 03:26:20 info: All unit tests passed.
 2022-07-09 03:26:25 info: All steps were completed successfully
+2022-07-11 04:24:54 info: ---------------------------------------------
+2022-07-11 04:24:54 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2022-07-11 04:24:54 info: ---------------------------------------------
+2022-07-11 04:25:09 info: All unit tests passed.
+2022-07-11 04:25:18 info: All steps were completed successfully
+2022-07-11 10:54:15 info: ------------------------------------------
+2022-07-11 10:54:15 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-07-11 10:54:15 info: ------------------------------------------
+2022-07-11 10:54:30 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-pokemonApp.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js (7.306 s)
+  pokemonApp
+    ✕ HTML should be syntactically valid (175 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✓ should use `fetch()` (1 ms)
+    ✓ should use `await fetch()` (1 ms)
+    ✓ should use try/catch
+
+  ● pokemonApp › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      12:2  error  <button> is missing required \"type\" attribute  element-required-attributes
+      12:2  error  <button> must have accessible text             text-content·
+    ✖ 2 problems (2 errors, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at validateHTML (test-runner/jsdom-helpers.js:46:28)
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js:40:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        7.602 s
+Ran all test suites matching /ex2-pokemonApp.test.js/i.
+2022-07-11 10:59:37 info: ------------------------------------------
+2022-07-11 10:59:37 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-07-11 10:59:37 info: ------------------------------------------
+2022-07-11 10:59:53 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-pokemonApp.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js (7.036 s)
+  pokemonApp
+    ✕ HTML should be syntactically valid (172 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✓ should use `fetch()` (1 ms)
+    ✓ should use `await fetch()` (1 ms)
+    ✓ should use try/catch
+
+  ● pokemonApp › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      12:2  error  <button> must have accessible text  text-content·
+    ✖ 1 problem (1 error, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at validateHTML (test-runner/jsdom-helpers.js:46:28)
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js:40:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        7.333 s, estimated 8 s
+Ran all test suites matching /ex2-pokemonApp.test.js/i.
+2022-07-11 11:02:11 info: ------------------------------------------
+2022-07-11 11:02:11 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-07-11 11:02:11 info: ------------------------------------------
+2022-07-11 11:02:26 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-pokemonApp.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js (7.026 s)
+  ● pokemonApp › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      12:2  error  <button> must have accessible text  text-content·
+    ✖ 1 problem (1 error, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at validateHTML (test-runner/jsdom-helpers.js:46:28)
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js:40:5)
+
+
+  ● Test suite failed to run
+
+    TypeError: Cannot create property 'textContent' on string 'button'
+
+      at main (file:/Users/ashraf/Desktop/HYF_GITHUB/Github-homework-javascript/Homework-class38/3-UsingAPIs/Week2/homework/ex2-pokemonApp/index.js:71:29)
+      at callTheUserObjectsOperation (node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+      at innerInvokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:340:25)
+      at invokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:276:3)
+      at EventTargetImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:223:9)
+      at fireAnEvent (node_modules/jsdom/lib/jsdom/living/helpers/events.js:18:36)
+      at Document.<anonymous> (node_modules/jsdom/lib/jsdom/browser/Window.js:912:9)
+      at Document.callTheUserObjectsOperation (node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+      at innerInvokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:340:25)
+      at invokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:276:3)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        7.336 s, estimated 8 s
+Ran all test suites matching /ex2-pokemonApp.test.js/i.
+2022-07-11 11:03:44 info: ------------------------------------------
+2022-07-11 11:03:44 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-07-11 11:03:44 info: ------------------------------------------
+2022-07-11 11:03:55 info: All unit tests passed.
+2022-07-11 11:04:03 info: All steps were completed successfully
+2022-07-11 11:19:56 info: -----------------------------------------
+2022-07-11 11:19:56 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2022-07-11 11:19:56 info: -----------------------------------------
+2022-07-11 11:20:32 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+
+<--- Last few GCs --->
+
+[24365:0x7f8a3e000000]    31184 ms: Scavenge 2044.3 (2079.7) -> 2044.0 (2084.4) MB, 5.8 / 0.0 ms  (average mu = 0.314, current mu = 0.185) allocation failure 
+[24365:0x7f8a3e000000]    34531 ms: Mark-sweep (reduce) 2047.4 (2084.7) -> 2046.4 (2080.7) MB, 2670.3 / 0.0 ms  (+ 231.2 ms in 50 steps since start of marking, biggest step 57.4 ms, walltime since start of marking 2937 ms) (average mu = 0.225, current mu 
+
+<--- JS stacktrace --->
+
+FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory
+ 1: 0x101665775 node::Abort() [/usr/local/bin/node]
+ 2: 0x1016658f8 node::OnFatalError(char const*, char const*) [/usr/local/bin/node]
+ 3: 0x1017dd707 v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [/usr/local/bin/node]
+ 4: 0x1017dd6a3 v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [/usr/local/bin/node]
+ 5: 0x10197c0e5 v8::internal::Heap::FatalProcessOutOfMemory(char const*) [/usr/local/bin/node]
+ 6: 0x10197a94c v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/usr/local/bin/node]
+ 7: 0x1019872c0 v8::internal::Heap::AllocateRawWithLightRetrySlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [/usr/local/bin/node]
+ 8: 0x101987341 v8::internal::Heap::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [/usr/local/bin/node]
+ 9: 0x1019541b7 v8::internal::Factory::NewFillerObject(int, bool, v8::internal::AllocationType, v8::internal::AllocationOrigin) [/usr/local/bin/node]
+10: 0x101d022ae v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [/usr/local/bin/node]
+11: 0x1020a4359 Builtins_CEntry_Return1_DontSaveFPRegs_ArgvOnStack_NoBuiltinExit [/usr/local/bin/node]
+2022-07-11 11:26:46 info: -----------------------------------------
+2022-07-11 11:26:46 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2022-07-11 11:26:46 info: -----------------------------------------
+2022-07-11 11:27:25 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+
+<--- Last few GCs --->
+
+[24501:0x7fbdac100000]    36473 ms: Scavenge (reduce) 2046.2 (2079.4) -> 2045.9 (2080.4) MB, 34.2 / 0.0 ms  (average mu = 0.280, current mu = 0.182) allocation failure 
+[24501:0x7fbdac100000]    38121 ms: Mark-sweep (reduce) 2047.2 (2080.4) -> 2046.8 (2081.2) MB, 1488.7 / 0.0 ms  (+ 1144.4 ms in 128 steps since start of marking, biggest step 104.9 ms, walltime since start of marking 3164 ms) (average mu = 0.234, current 
+
+<--- JS stacktrace --->
+
+FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory
+ 1: 0x1052d4775 node::Abort() [/usr/local/bin/node]
+ 2: 0x1052d48f8 node::OnFatalError(char const*, char const*) [/usr/local/bin/node]
+ 3: 0x10544c707 v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [/usr/local/bin/node]
+ 4: 0x10544c6a3 v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [/usr/local/bin/node]
+ 5: 0x1055eb0e5 v8::internal::Heap::FatalProcessOutOfMemory(char const*) [/usr/local/bin/node]
+ 6: 0x1055e994c v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/usr/local/bin/node]
+ 7: 0x1055f62c0 v8::internal::Heap::AllocateRawWithLightRetrySlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [/usr/local/bin/node]
+ 8: 0x1055f6341 v8::internal::Heap::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [/usr/local/bin/node]
+ 9: 0x1055c31b7 v8::internal::Factory::NewFillerObject(int, bool, v8::internal::AllocationType, v8::internal::AllocationOrigin) [/usr/local/bin/node]
+10: 0x1059712ae v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [/usr/local/bin/node]
+11: 0x105d13359 Builtins_CEntry_Return1_DontSaveFPRegs_ArgvOnStack_NoBuiltinExit [/usr/local/bin/node]
+2022-07-11 11:28:17 info: -----------------------------------------
+2022-07-11 11:28:17 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2022-07-11 11:28:17 info: -----------------------------------------
+2022-07-11 11:28:23 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    ✓ should have all TODO comments removed (2 ms)
+    ✓ `rollDieUntil` should not contain unneeded console.log calls (1 ms)
+    ✕ should not include a recursive call (2 ms)
+    ✓ should use async/wait
+    ✓ should use try/catch (1 ms)
+    ✕ should resolve as soon as a die settles on an ACE (15 ms)
+    ✕ should reject with an Error when a die rolls off the table (4 ms)
+
+  ● ex3-rollAnAce › should not include a recursive call
+
+    expect(received).toBeUndefined()
+
+    Received: true
+
+      53 |
+      54 |   test('should not include a recursive call', () => {
+    > 55 |     expect(state.recursive).toBeUndefined();
+         |                             ^
+      56 |   });
+      57 |
+      58 |   test('should use async/wait', () => {
+
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:55:29)
+
+  ● ex3-rollAnAce › should resolve as soon as a die settles on an ACE
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "ACE"
+    Received: "QUEEN"
+
+      90 |       expect(promise).toBeInstanceOf(Promise);
+      91 |       const result = await promise;
+    > 92 |       expect(result).toBe('ACE');
+         |                      ^
+      93 |     } finally {
+      94 |       randomSpy.mockRestore();
+      95 |     }
+
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:92:22)
+
+  ● ex3-rollAnAce › should reject with an Error when a die rolls off the table
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+       97 |
+       98 |   test('should reject with an Error when a die rolls off the table', async () => {
+    >  99 |     expect.assertions(3);
+          |            ^
+      100 |     expect(exported).toBeDefined();
+      101 |
+      102 |     // This sequence is known to cause the die to roll off the table
+
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:99:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 4 passed, 7 total
+Snapshots:   0 total
+Time:        1.272 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
+2022-07-11 11:31:14 info: -----------------------------------------
+2022-07-11 11:31:14 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2022-07-11 11:31:14 info: -----------------------------------------
+2022-07-11 11:31:49 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+
+<--- Last few GCs --->
+
+[24624:0x7fdf3b900000]    28857 ms: Mark-sweep (reduce) 2046.5 (2079.9) -> 2046.2 (2080.4) MB, 2174.3 / 0.0 ms  (+ 1374.4 ms in 169 steps since start of marking, biggest step 172.7 ms, walltime since start of marking 3918 ms) (average mu = 0.304, current [24624:0x7fdf3b900000]    33406 ms: Mark-sweep (reduce) 2046.8 (2080.4) -> 2046.6 (2080.9) MB, 3763.2 / 0.0 ms  (+ 95.9 ms in 8 steps since start of marking, biggest step 92.7 ms, walltime since start of marking 3866 ms) (average mu = 0.224, current mu = 
+
+<--- JS stacktrace --->
+
+FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory
+ 1: 0x10eb02775 node::Abort() [/usr/local/bin/node]
+ 2: 0x10eb028f8 node::OnFatalError(char const*, char const*) [/usr/local/bin/node]
+ 3: 0x10ec7a707 v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [/usr/local/bin/node]
+ 4: 0x10ec7a6a3 v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [/usr/local/bin/node]
+ 5: 0x10ee190e5 v8::internal::Heap::FatalProcessOutOfMemory(char const*) [/usr/local/bin/node]
+ 6: 0x10ee1794c v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/usr/local/bin/node]
+ 7: 0x10ee15c18 v8::internal::Heap::HandleGCRequest() [/usr/local/bin/node]
+ 8: 0x10edc2461 v8::internal::StackGuard::HandleInterrupts() [/usr/local/bin/node]
+ 9: 0x10f19ecb7 v8::internal::Runtime_StackGuardWithGap(int, unsigned long*, v8::internal::Isolate*) [/usr/local/bin/node]
+10: 0x10f541359 Builtins_CEntry_Return1_DontSaveFPRegs_ArgvOnStack_NoBuiltinExit [/usr/local/bin/node]
+11: 0x113a17281 
+12: 0x113a197d2 
+13: 0x113a1bb80 
+14: 0x10f50373f Builtins_AsyncFunctionAwaitResolveClosure [/usr/local/bin/node]
+2022-07-11 11:33:31 info: -----------------------------------------
+2022-07-11 11:33:31 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2022-07-11 11:33:31 info: -----------------------------------------
+2022-07-11 11:33:36 info: All unit tests passed.
+2022-07-11 11:33:39 info: All steps were completed successfully
+2022-07-11 11:44:43 info: ----------------------------------------
+2022-07-11 11:44:43 info: >>> Running Unit Test `ex4-diceRace` <<<
+2022-07-11 11:44:43 info: ----------------------------------------
+2022-07-11 11:44:47 info: All unit tests passed.
+2022-07-11 11:44:50 info: All steps were completed successfully
+2022-07-12 01:01:28 info: ----------------------------------------
+2022-07-12 01:01:28 info: >>> Running Unit Test `ex5-vscDebug` <<<
+2022-07-12 01:01:28 info: ----------------------------------------
+2022-07-12 01:01:28 warn: A unit test file was not provided.
+2022-07-12 01:01:39 info: All steps were completed successfully
+2022-07-12 01:25:35 info: --------------------------------------------
+2022-07-12 01:25:35 info: >>> Running Unit Test `ex6-browserDebug` <<<
+2022-07-12 01:25:35 info: --------------------------------------------
+2022-07-12 01:25:35 warn: A unit test file was not provided.
+2022-07-12 01:25:47 info: All steps were completed successfully
